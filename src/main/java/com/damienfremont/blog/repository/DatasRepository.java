@@ -9,12 +9,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.PagingAndSortingRepository;
 
-public class DatasRepository implements PagingAndSortingRepository<com.damienfremont.blog.model.Person, Serializable> {
+public class DatasRepository implements DataRepository {
 
 	// MOCK
-	static List<com.damienfremont.blog.model.Person> datas;
+	static List<Person> datas;
 	static {
 		datas = new ArrayList<Person>();
 		for (int i = 0; i < 5000; i++) {
