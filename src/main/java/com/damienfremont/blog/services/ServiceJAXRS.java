@@ -1,6 +1,5 @@
 package com.damienfremont.blog.services;
 
-import java.io.Serializable;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
