@@ -1,10 +1,6 @@
 'use strict';
 
-var app = angular.module(
-  'app', 
-  [ 'ngResource',
-    'smart-table'
-    ]);
+var app = angular.module('app', [ 'ngResource', 'smart-table']);
 
 app.factory('Service', function($resource) {
     return $resource('api/person/page');
