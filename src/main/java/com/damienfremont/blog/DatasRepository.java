@@ -17,7 +17,7 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 	// MOCK
 	static List<Person> datas;
 	static {
-		datas = new ArrayList<>();
+		datas = new ArrayList<Person>();
 		for (int i = 0; i < 5000; i++) {
 			datas.add(new Person(i + 1, "John", "Doe"));
 			i++;
@@ -27,90 +27,77 @@ public class DatasRepository implements PagingAndSortingRepository<Person, Seria
 		}
 	}
 
-	@Override
 	public Page<Person> findAll(Pageable arg0) {
 		int pSize = arg0.getPageSize();
 		int pNumb = arg0.getPageNumber();
 		int pFirst = pNumb * pSize;
 		int pLast = pFirst + pSize;
 		int total = datas.size();
-		List<Person> content = new ArrayList<>();
+		List<Person> content = new ArrayList<Person>();
 		for (int i = 0; i < total; i++) {
 			if (i >= pFirst && i < pLast) {
 				Person data = datas.get(i);
 				content.add(data);
 			}
 		}
-		return new PageImpl<>(content, arg0, total);
+		return new PageImpl<Person>(content, arg0, total);
 	}
 
-	@Override
 	public long count() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public void delete(Serializable arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void delete(Person arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void delete(Iterable<? extends Person> arg0) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public boolean exists(Serializable arg0) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public Iterable<Person> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Iterable<Person> findAll(Iterable<Serializable> arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Person findOne(Serializable arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public <S extends Person> S save(S arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public <S extends Person> Iterable<S> save(Iterable<S> arg0) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public Iterable<Person> findAll(Sort arg0) {
 		// TODO Auto-generated method stub
 		return null;
