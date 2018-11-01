@@ -1,4 +1,4 @@
-package com.damienfremont.blog;
+package com.damienfremont.blog.services;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,21 +1,22 @@
-package com.damienfremont.blog;
+package com.damienfremont.blog.repository;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.damienfremont.blog.model.Person;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.damienfremont.blog.ServiceJAXRS.Person;
+/*import com.damienfremont.blog.services.ServiceJAXRS.Person;*/
 
-public class DatasRepository implements PagingAndSortingRepository<Person, Serializable> {
+public class DatasRepository implements PagingAndSortingRepository<com.damienfremont.blog.model.Person, Serializable> {
 
 	// MOCK
-	static List<Person> datas;
+	static List<com.damienfremont.blog.model.Person> datas;
 	static {
 		datas = new ArrayList<Person>();
 		for (int i = 0; i < 5000; i++) {

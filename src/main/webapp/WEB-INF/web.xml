@@ -8,7 +8,7 @@
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
 		<init-param>
 			<param-name>javax.ws.rs.Application</param-name>
-			<param-value>com.damienfremont.blog.MyAppCONFIG</param-value>
+			<param-value>com.damienfremont.blog.services.MyAppCONFIG</param-value>
 		</init-param>
 		<init-param>
 			<param-name>jersey.config.server.provider.classnames</param-name>
