@@ -1,4 +1,4 @@
-package com.damienfremont.blog.services;
+package com.damienfremont.blog.controller;
 
 
 import javax.ws.rs.GET;
