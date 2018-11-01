@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import com.damienfremont.blog.repository.DatasRepository;
+import com.damienfremont.blog.repository.DataRepositoryImpl;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -15,7 +15,7 @@ import org.springframework.data.domain.Pageable;
 @Path("/person")
 public class ServiceJAXRS {
 
-  DatasRepository datas = new DatasRepository();
+  DataRepositoryImpl datas = new DataRepositoryImpl();
 
   @Path("/page")
   @GET

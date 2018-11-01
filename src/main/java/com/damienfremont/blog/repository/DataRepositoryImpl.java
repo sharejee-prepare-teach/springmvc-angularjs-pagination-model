@@ -10,7 +10,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-public class DatasRepository implements DataRepository {
+public class DataRepositoryImpl implements DataRepository {
 
 	// MOCK
 	static List<Person> datas;
