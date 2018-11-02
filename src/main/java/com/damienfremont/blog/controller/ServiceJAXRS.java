@@ -27,6 +27,9 @@ public class ServiceJAXRS {
     Pageable pageRequest = new PageRequest( //
         ((page == null) ? 0 : (page - 1)), //
         ((size == null) ? 10 : size));
+    System.out.println("Page: " + page);
+    System.out.println("Size: " + size);
+
     return datas.findAll(pageRequest);
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module('app', [ 'ngResource', 'smart-table']);
-
+alert("Data");
 app.factory('Service', function($resource) {
     return $resource('api/person/page');
 });
@@ -9,7 +9,6 @@ app.factory('Service', function($resource) {
 app.controller('TableCtrl', function ($scope, Service) {
 	
   $scope.itemsByPage = 10;
-	
   $scope.callServer = function(tableState) {
     $scope.isLoading = true;
 	var pagination = tableState.pagination;
@@ -24,6 +23,7 @@ app.controller('TableCtrl', function ($scope, Service) {
         $scope.items = pageable.content;
         tableState.pagination.numberOfPages = pageable.totalPages;
         $scope.isLoading = false;
+          alert("Data " + pageable.totalPages+" items "+$scope.items);
     });
   };
 });

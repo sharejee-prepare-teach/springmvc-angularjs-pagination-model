@@ -26,6 +26,7 @@ public class DataRepositoryImpl implements DataRepository {
 	}
 
 	public Page<Person> findAll(Pageable arg0) {
+
 		int pSize = arg0.getPageSize();
 		int pNumb = arg0.getPageNumber();
 		int pFirst = pNumb * pSize;
